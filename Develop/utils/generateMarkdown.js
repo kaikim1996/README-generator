@@ -1,7 +1,5 @@
 // Function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
-      // Define a dictionary that maps license names to their respective badge URLs
       const licenseBadges = {
         "MIT": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
         "Apache 2.0": "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
@@ -40,13 +38,8 @@ This project is licensed under the ${license} License.
 function generateMarkdown(data) {
   return `# ${data.title}
 
-[${renderLicenseBadge(data.license)}](${renderLicenseLink(data.license)})
+[${renderLicenseBadge(data.license)}]
 
-## Description
-
-${data.description}
-
----
 
 ## Table Of Contents
                              
@@ -56,6 +49,12 @@ ${data.description}
 - [License](#license)
 - [Contributions](#contributions)
 - [Contact](#contact)
+
+---
+
+## Description
+
+${data.description}
 
 ---
 
@@ -101,75 +100,3 @@ Email: [${data.email}](mailto:${data.email}).
 
 module.exports = generateMarkdown;
 
-
-
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-[${renderLicenseBadge(data.license)}]
-
-## Description
-
-${data.description}
-
----
-
-## Table Of Contents
-                             
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
----
-
-## Installation
-
-To install the required dependencies, just run this code: 
-
-\`\`\`
-${data.installation}
-\`\`\`
-
----
-
-## Usage
-
-${data.usage}
-
----
-
-## License
-
-${returnLicenseSection(data.license)}
-
----
-
-## Contributions
-
-${data.contributions}
-
----
-
-## Tests
-
-To run tests, just run the following command:
-
-\`\`\`
-${data.test}
-\`\`\`
-
---- 
-
-## Questions
-
-You can find more about my work at my Github [${data.username}](https://github.com/${data.username}).
-If you have any questions you can reach me at [${data.email}](mailto:${data.email}).
-
-`;
-}
-
-module.exports = generateMarkdown;

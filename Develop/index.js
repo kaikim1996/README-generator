@@ -1,13 +1,75 @@
-// TODO: Include packages needed for this application
+// Calls inquirer package 
+const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// Array of questions for user input
+const questions = [
+    {
+        type: 'input',
+        message: 'Name:',
+        name: 'title'
+    },
+    {
+        type: 'input',
+        message:'Description:',
+        name: 'description'
+    },
+    {
+        type:'input',
+        message: 'Installation:',
+        name:'installation',
+        default:'npm i'
+    },
+    {
+        type:'input',
+        message:'Usage:',
+        name:'usage',
+        default: 'N/A'
+    },
+    {
+        type:'input',
+        message:'Contributions:',
+        name:'contributions',
+        default:'N/A'
+    },
+    {
+        type:'list',
+        message: 'Licence:',
+        name:'license',
+        choices: ['MIT','Apache 2.0','BSD 2','BSD 3','Mozzila Public Licence','None']
+    },
+    {
+        type: 'input',
+        message:'Github:',
+        name:'username'
+    },
+    {
+        type:'input',
+        message :'Email:',
+        name:'email'
+    }
+];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//Function to write the README file
+function writeToFile(fileName, data) {
+    fs.writeFile(`${fileName}.md`,data, err => err ? console.error(err) : console.log('Success!') );
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// A function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then((response) => 
+    {
+            const readmeData = generateMarkdown(response);
+            writeToFile('README',readmeData);
 
-// Function call to initialize app
+    })
+
+}
+
+// Initializes the application
 init();
+
+
+

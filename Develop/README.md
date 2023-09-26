@@ -1,6 +1,4 @@
-# Kaitlyn Kim
-
-[[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]
+# kaitlyn
 
 
 ## Table Of Contents
@@ -16,7 +14,7 @@
 
 ## Description
 
-Application test. 
+README application test
 
 ---
 
@@ -24,8 +22,8 @@ Application test.
 
 To install the required dependencies, run the following code: 
 
-```
-npm i
+```bash
+node index.js
 ```
 
 ---
@@ -43,6 +41,8 @@ N/A
 This project is licensed under the MIT License.
 
 
+[[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]
+
 ---
 
 ## Contributions
@@ -57,5 +57,5 @@ N/A
 Please connect with me using the following to report any issues: 
 
 Github: [kaikim1996](https://github.com/kaikim1996).
-Email: [kaitlynkim1996@gmail.com](mailto:kaitlynkim1996@gmail.com).
+Email: [kaitlynkim81@gmail.com](mailto:kaitlynkim81@gmail.com).
 

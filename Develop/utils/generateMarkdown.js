@@ -38,8 +38,6 @@ This project is licensed under the ${license} License.
 function generateMarkdown(data) {
   return `# ${data.title}
 
-[${renderLicenseBadge(data.license)}]
-
 
 ## Table Of Contents
                              
@@ -62,7 +60,7 @@ ${data.description}
 
 To install the required dependencies, run the following code: 
 
-\`\`\`
+\`\`\`bash
 ${data.installation}
 \`\`\`
 
@@ -77,6 +75,8 @@ ${data.usage}
 ## License
 
 ${returnLicenseSection(data.license)}
+
+[${renderLicenseBadge(data.license)}]
 
 ---
 

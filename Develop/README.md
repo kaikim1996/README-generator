@@ -1,4 +1,4 @@
-# kaitlyn
+# README Generator
 
 
 ## Table Of Contents
@@ -14,23 +14,26 @@
 
 ## Description
 
-README application test
+This application will generate a high-quality, professional README file for a user once they fill out a string of questions. 
 
 ---
 
 ## Installation
 
-To install the required dependencies, run the following code: 
+The application will be invoked by using the following command:
 
 ```bash
 node index.js
 ```
 
+
 ---
 
 ## Usage
 
-N/A
+Video demonstration of the application: 
+
+
 
 ---
 
